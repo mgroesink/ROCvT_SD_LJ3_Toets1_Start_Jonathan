@@ -39,5 +39,29 @@
                 throw new ArgumentException("Getal moet groter zijn dan 5");
             }
         }
+
+
+        public static string ConvertStringToBinary(string naam)
+        {
+            
+
+            string voornaam = naam.Split(' ')[0];
+            string achternaam = naam.Split(' ')[1];
+
+            string binvoor = string.Empty;
+            string binachter = string.Empty;
+            foreach (char c in voornaam)
+            {
+                binvoor += Convert.ToString(c, 2);
+            }
+            foreach (char c in achternaam)
+            {
+                binachter += Convert.ToString(c, 2);
+            }
+
+
+            return binvoor.TrimEnd() + " " + binachter.TrimEnd();
+        }
+
     }
 }

@@ -35,7 +35,23 @@ namespace Toets1_Start.Controllers
         {
             // Hier komt jouw uitwerking van opdracht 2
             ViewBag.Naam = "Jonathan";
-            return Content("Welkom bij deze ASP-NET / C# toets");
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Opdracht2(string naam)
+        {
+            // Hier komt jouw uitwerking van opdracht 2
+            ViewBag.Naam = "Jonathan";
+                
+
+            
+                ViewBag.awnser = MyFunctions.ConvertStringToBinary(naam);
+            
+
+
+
+
+            return View();
         }
     }
 }
