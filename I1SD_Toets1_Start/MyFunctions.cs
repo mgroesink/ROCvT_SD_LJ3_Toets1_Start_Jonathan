@@ -13,25 +13,31 @@
 
         public static List<int> CreateNumberSequence(int value1)
         {
-            List<int> awnser = new List<int>();
-
-            for (awnser = value1;  < 0;)
+            if (value1 >= 10 && value1 <= 100)
             {
+                List<int> awnser = new List<int>();
+                awnser.Add(value1);
 
+
+                while (value1 != 1)
+                {
+                    if (value1 % 2 == 0)
+                    {
+                        value1 = value1 / 2;
+                        awnser.Add(value1);
+                    }
+                    else
+                    {
+                        value1 = value1 * 3 + 1;
+                        awnser.Add(value1);
+                    }
+                }
+                return awnser;
             }
-
-
-                if (value1 % 2 == 0)
-                {
-                    value1 = value1 / 2;
-                }
-                else
-                {
-                    value1 = value1 * 3 + 1;
-                }
-            
-
-            return awnser;
+            else
+            {
+                throw new ArgumentException("Getal moet groter zijn dan 5");
+            }
         }
     }
 }

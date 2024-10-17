@@ -17,12 +17,16 @@ namespace Toets1_Start.Controllers
             // Hier komt jouw uitwerking van opdracht 1
             ViewBag.Naam = "Jonathan";
 
-            if (Value1 >= 10 && Value1 <= 100)
+
+            try
             {
                 ViewBag.awnser = MyFunctions.CreateNumberSequence(Value1);
             }
+            catch (Exception ex) { ViewBag.ex = ex; }
+            
 
-
+            
+            
             return View();
         }
 
