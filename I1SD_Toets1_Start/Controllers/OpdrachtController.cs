@@ -42,12 +42,13 @@ namespace Toets1_Start.Controllers
         {
             // Hier komt jouw uitwerking van opdracht 2
             ViewBag.Naam = "Jonathan";
+
+
+            ViewBag.ogname = naam;
+                string awnser = MyFunctions.ConvertStringToBinary(naam);
+            ViewBag.awnser = awnser;
+            
                 
-
-            
-                ViewBag.awnser = MyFunctions.ConvertStringToBinary(naam);
-            
-
 
 
 

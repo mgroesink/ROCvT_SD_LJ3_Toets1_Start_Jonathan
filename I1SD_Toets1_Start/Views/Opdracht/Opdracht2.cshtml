@@ -4,10 +4,16 @@
 
 <form asp-action="Opdracht2" method="post">
 
-    <input type="text" name="naam" placeholder="Vul hier uw naam in" style="width:400px;"/>
+    <input id="naam" type="text" name="naam" placeholder="Vul hier uw naam in" style="width:400px;"/>
     <br />
     <br />
     <button type="submit" style="width:250px;">Submit</button>
 
 </form>
 
+@if(ViewBag.awnser != null)
+{
+    
+    <p>@ViewBag.awnser</p>
+    
+}

@@ -52,15 +52,15 @@
             string binachter = string.Empty;
             foreach (char c in voornaam)
             {
-                binvoor += Convert.ToString(c, 2);
+                binvoor += Convert.ToString(c, 2) + ' ';
             }
             foreach (char c in achternaam)
             {
-                binachter += Convert.ToString(c, 2);
+                binachter += Convert.ToString(c, 2) + ' ';
             }
 
 
-            return binvoor.TrimEnd() + " " + binachter.TrimEnd();
+            return voornaam + ": " + binvoor.TrimEnd() + " | " + achternaam +": "+ binachter.TrimEnd();
         }
 
     }
