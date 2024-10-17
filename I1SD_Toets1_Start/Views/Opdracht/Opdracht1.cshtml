@@ -2,3 +2,16 @@
 
 <h1>@ViewBag.Naam</h1>
 
+<form asp-action="Opdracht1" method="post">
+
+    <input type="number" name="Value1" placeholder="Vul hier uw getal in" style="width:250px;" value="0" required min="10" max="100" />
+    <br />
+    <br />
+    <button type="submit" style="width:250px;">GO</button>
+    
+</form>
+
+@if(ViewBag.awnser != null)
+{
+    <p>De getallenreeks van het gegeven getal is @ViewBag.awnser</p>
+}
